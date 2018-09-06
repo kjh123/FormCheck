@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>FormCheck</title>
+	<link href="https://cdn.bootcss.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+	
+	<form action="" id="FormCheck" class="form-horizontal" onsubmit='layer.open({"content":"校验成功","btn":"确定"}); return false;' style="margin: 50px 50px">
+	    <div class="box-body">
+	        <div class="fields-group">
+	        	<div class="form-group row">
+	                <label class="col-md-3 col-sm-3 control-label">请输入姓名</label>
+	                <input class="form-control col-md-6 col-sm-6" type="text" 	
+	                data-rules='{"attribute":"姓名","rules":["required", "length:2,8"]}' name="name" value="" placeholder="请输入姓名" />
+	            </div>
+	        </div>
+	    </div>
+
+	    <div class="col-md-8">
+	        <div class="btn-group pull-right">
+	            <button type="submit" class="btn btn-info pull-right" data-loading-text="<i class='fa fa-spinner fa-spin '></i> 校验">校验</button>
+	        </div>
+
+	    </div>
+	</form>
+</body>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/layer/3.1.0/mobile/layer.js"></script>
+<script src="../formCheck1.0.0.js"></script>
+</html>
